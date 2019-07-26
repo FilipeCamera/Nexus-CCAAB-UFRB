@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {View, Text, TouchableOpacity} from  'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './styles'
 
 export default class SubMenu extends Component {
@@ -21,16 +21,16 @@ export default class SubMenu extends Component {
                     <Text style={styles.text}>Nº de Pontos: </Text>
                 </View>
                 <View style={styles.btn}>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Pontos')}>
                         <Text style={styles.txtbutton}>Área 1</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Pontos')}>
                         <Text style={styles.txtbutton}>Área 2</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Pontos')}>
                         <Text style={styles.txtbutton}>Área 3</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Pontos')}>
                         <Text style={styles.txtbutton}>Área 4</Text>
                     </TouchableOpacity>
                 </View>
