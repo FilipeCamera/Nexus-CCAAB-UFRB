@@ -8,6 +8,15 @@ export default class Menu extends Component{
     static navigationOptions = {
         header: null
     }
+    constructor(props){
+        super(props);
+        this.state = {
+            nome: '',
+            localizacao: '',
+            data: '01-01-2018',
+            pontos: 0,
+        }
+    }
     render() {
         return(
             <View style={styles.container}>
@@ -19,19 +28,23 @@ export default class Menu extends Component{
                 
                 <View style={styles.form}>
                     <TextInput 
+                        onChangeText={(name) => this.setState({nome: name})}
                         placeholder='Nome do Proprietário'
                         style={styles.textInput}
                     ></TextInput>
                     <TextInput 
+                        onChangeText={(location) => this.setState({localizacao: location})}
                         placeholder='Localização'
                         style={styles.textInput}
                     ></TextInput>
                 </View>
                 <View style={styles.data}>
                     <DatePicker 
+                        date={this.state.data}
                         style={styles.date}
                         mode='date'
                         format='DD-MM-YYYY'
+                        onDateChange={(date) => {this.setState({data: date})}}
                         customStyles={{
                             dateInput: {
                                 backgroundColor: 'rgba(255, 255, 255, 0.9)',
@@ -43,13 +56,14 @@ export default class Menu extends Component{
                 </View>
                 <View style={styles.ponto}>
                 <TextInput 
+                    onChangeText={(ponto) => this.setState({pontos: ponto})}
                     placeholder='Nº de Pontos' 
                     keyboardType='number-pad'
                     style={styles.textInputp}
                 ></TextInput>
                 </View>
                 <View style={styles.btn}>
-                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SubMenu')}>
+                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SubMenu', {result: this.state})}>
                         <Text style={styles.textButton}>Começar</Text>
                     </TouchableOpacity>
                 </View>

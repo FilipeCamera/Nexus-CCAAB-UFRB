@@ -15,10 +15,10 @@ export default class SubMenu extends Component {
                     <Text style={styles.titulo}>Nexus</Text>
                 </View>
                 <View style={styles.formulario}>
-                    <Text style={styles.text}>Nome: </Text>
-                    <Text style={styles.text}>Localização: </Text>
-                    <Text style={styles.text}>Data: </Text>
-                    <Text style={styles.text}>Nº de Pontos: </Text>
+                    <Text style={styles.text}>Nome: { this.props.navigation.state.params.result.nome }</Text>
+                    <Text style={styles.text}>Localização: { this.props.navigation.state.params.result.localizacao }</Text>
+                    <Text style={styles.text}>Data: { this.props.navigation.state.params.result.data }</Text>
+                    <Text style={styles.text}>Nº de Pontos: { this.props.navigation.state.params.result.pontos }</Text>
                 </View>
                 <View style={styles.btn}>
                     <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Pontos')}>
