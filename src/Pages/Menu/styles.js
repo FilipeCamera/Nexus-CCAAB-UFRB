@@ -12,6 +12,8 @@ const styles = StyleSheet.create({
         borderRadius: 70,
         backgroundColor: 'rgba( 255, 255, 255, 1.0)',
         marginTop: 40,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     title: {
         fontSize: 25,

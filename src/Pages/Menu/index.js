@@ -14,17 +14,17 @@ export default class Menu extends Component{
             nome: '',
             localizacao: '',
             data: '01-01-2018',
-            pontos: 0,
+            //pontos: 0,
         }
     }
     render() {
         return(
             <View style={styles.container}>
                 <View style={styles.logo}>
-                    <Image />
+                    <Image source={require('../../images/logoNexus.jpeg')} style={{width: 130, height: 130, borderRadius: 60}}/>
                 </View>
     
-                <Text style={styles.title}>NEXUS</Text>
+                <Text style={styles.title}>Formulário</Text>
                 
                 <View style={styles.form}>
                     <TextInput 
@@ -55,12 +55,11 @@ export default class Menu extends Component{
                     />
                 </View>
                 <View style={styles.ponto}>
-                <TextInput 
-                    onChangeText={(ponto) => this.setState({pontos: ponto})}
-                    placeholder='Nº de Pontos' 
-                    keyboardType='number-pad'
-                    style={styles.textInputp}
-                ></TextInput>
+                    <TextInput
+                        style={styles.textInputp} 
+                        placeholder='Nº de Pontos'
+                        onChangeText={(ponto) => this.setState({pontos: ponto})}
+                    />
                 </View>
                 <View style={styles.btn}>
                     <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SubMenu', {result: this.state})}>

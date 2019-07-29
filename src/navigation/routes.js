@@ -3,13 +3,15 @@ import Menu from '../Pages/Menu';
 import SubMenu from '../Pages/SubMenu';
 import Pontos from '../Pages/Pontos';
 import Pesquisa from '../Pages/Pesquisa';
+import Ponto from '../components/ponto';
 
 const Routes = createAppContainer(
     createStackNavigator({
         Menu,
         SubMenu,
         Pontos,
-        Pesquisa
+        Pesquisa,
+        Ponto
     })
 );
 

@@ -1,9 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     title: {
         padding: 10,
         flexDirection: 'row',
@@ -46,16 +43,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'rgba(255, 255, 255, 1.0)',
     },
-    button: {
-        //position: 'absolute',
-        marginTop: 20,
-        width: '100%',
-        height: 60,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'rgba(12, 212, 0, 1.0)'
-
-    }
+    
 })
 
 export default styles;
