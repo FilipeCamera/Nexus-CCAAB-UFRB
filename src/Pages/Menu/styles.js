@@ -1,23 +1,25 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+var { height, width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'rgba(232, 184, 0, 0.6)',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     logo: {
         width: 140,
         height: 140,
         borderRadius: 70,
         backgroundColor: 'rgba( 255, 255, 255, 1.0)',
-        marginTop: 40,
+        marginTop: 20,
         alignItems: 'center',
         justifyContent: 'center'
     },
     title: {
         fontSize: 25,
-        marginTop: 40,
+        marginTop: 20,
         color: 'rgba(0, 0, 0, 0.6)'
     },
     textInput: {
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
         fontSize: 18
     },
     date: {
-        width: 250,
+        width: width/2,
     },
     button: {
         width: 350,

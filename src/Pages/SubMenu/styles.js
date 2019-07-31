@@ -1,8 +1,12 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+var { height, width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        width: width,
+        height: height,
     },
     title: {
         padding: 10,
@@ -22,11 +26,11 @@ const styles = StyleSheet.create({
         borderBottomColor: 'rgba(0, 0, 0, 0.4)'
     },
     btn: {
-        marginTop: 10,
+        //marginTop: 5,
         alignItems: 'center'
     },
     text: {
-        marginBottom: 10,
+        marginBottom: 5,
         fontSize: 16,
         fontStyle: 'normal',
         fontWeight: 'bold'
@@ -36,7 +40,7 @@ const styles = StyleSheet.create({
         height: 60,
         backgroundColor: 'rgba(0, 0, 255, 0.7)',
         borderRadius: 5,
-        marginTop: 10,
+        marginTop: 5,
         justifyContent: 'center'
     },
     txtbutton: {
@@ -45,19 +49,19 @@ const styles = StyleSheet.create({
         color: 'rgba(255, 255, 255, 1.0)'
     },
     button2: {
-        width: 380,
-        height: 60,
+        width: width,
+        height: 50,
         backgroundColor: 'rgba(12, 212, 0, 0.9)',
-        borderRadius: 5,
-        marginTop: 10,
+        //borderRadius: 5,
+        marginTop: 20,
         justifyContent: 'center'
     },
     button3: {
-        width: 380,
-        height: 60,
+        width: width,
+        height: 50,
         backgroundColor: 'rgba(255, 34, 0, 0.9)',
-        borderRadius: 5,
-        marginTop: 10,
+        //borderRadius: 5,
+        marginTop: 5,
         justifyContent: 'center'
     },
     txtbutton2: {

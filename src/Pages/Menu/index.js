@@ -28,11 +28,14 @@ export default class Menu extends Component{
                 
                 <View style={styles.form}>
                     <TextInput 
+                        textContentType='name'
                         onChangeText={(name) => this.setState({nome: name})}
                         placeholder='Nome do Proprietário'
                         style={styles.textInput}
                     ></TextInput>
                     <TextInput 
+                        textContentType='addressCityAndState'
+                        dataDetectorTypes='address'
                         onChangeText={(location) => this.setState({localizacao: location})}
                         placeholder='Localização'
                         style={styles.textInput}
@@ -56,6 +59,7 @@ export default class Menu extends Component{
                 </View>
                 <View style={styles.ponto}>
                     <TextInput
+                        keyboardType='numeric'
                         style={styles.textInputp} 
                         placeholder='Nº de Pontos'
                         onChangeText={(ponto) => this.setState({pontos: ponto})}

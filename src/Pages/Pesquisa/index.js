@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {View, ScrollView, Text, TouchableOpacity} from 'react-native';
+import {View, ScrollView, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 
 import BoxUm from '../../components/box1';
 import BoxDois from '../../components/box2';
@@ -33,9 +33,30 @@ export default class Pesquisa extends Component {
     static navigationOptions = {
         header: null,
     }
+    constructor(props){
+        super(props);
+        this.state = {
+            animating: true,
+        }
+    }
+    componentDidMount(){
+        this.closeActivy();
+    }
+    closeActivy = () => (
+        setTimeout(() => {
+            this.setState({animating: false})
+        }, 4000)
+    )
     render() {
-        return(
-            <View>
+        if(this.state.animating == true){
+            return(
+                <View style={styles.activy}>
+                    <ActivityIndicator animating={this.state.animating} color='rgba(212, 184, 0, 0.6)'  size='large'/>
+                </View>
+            )
+        } else {
+            return(
+                <View>
                 <View style={styles.boxtitle}>
                     <Text style={styles.txttitle}>Dados</Text>
                 </View>
@@ -71,6 +92,9 @@ export default class Pesquisa extends Component {
                     </View>
                 </ScrollView>                
             </View>
-        );
+            )
+        }
+            
+        
     }
 }

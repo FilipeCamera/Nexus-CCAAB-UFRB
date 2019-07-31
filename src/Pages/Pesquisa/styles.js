@@ -1,6 +1,12 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
+    activy: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: Dimensions.get('window').height,
+        width: Dimensions.get('window').width
+    },
     boxtitle: {
         flexDirection: 'row',
         justifyContent: 'center',
