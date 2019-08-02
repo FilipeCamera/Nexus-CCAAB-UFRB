@@ -8,9 +8,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "chart.js": "^2.8.0",
+    "immutability-helper": "^3.0.1",
     "react": "16.8.6",
     "react-native": "0.60.4",
+    "react-native-charts-wrapper": "^0.5.5",
     "react-native-check-box": "^2.1.7",
     "react-native-datepicker": "^1.7.2",
     "react-native-gesture-handler": "^1.3.0",

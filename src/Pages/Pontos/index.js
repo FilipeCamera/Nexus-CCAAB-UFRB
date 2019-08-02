@@ -24,7 +24,7 @@ export default class Pontos extends Component {
                         <Icon name='arrowleft' size={24} color='rgba(0, 0, 0, 1.0)' style={{padding: 5}}/>
                     </TouchableOpacity>
                     <Text style={styles.titulo}>Área {this.state.id}</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Grafico', {result: this.state})}>
                         <Icon name='dotchart' size={24} color='rgba(0, 0, 0, 1.0)' style={{padding: 5}}/>
                     </TouchableOpacity>
                 </View>

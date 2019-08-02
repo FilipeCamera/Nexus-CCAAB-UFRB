@@ -37,6 +37,7 @@ export default class Pesquisa extends Component {
         super(props);
         this.state = {
             animating: true,
+
         }
     }
     componentDidMount(){

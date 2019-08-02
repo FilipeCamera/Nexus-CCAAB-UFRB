@@ -1,10 +1,10 @@
-import {createAppContainer, createStackNavigator} from 'react-navigation';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import Menu from '../Pages/Menu';
 import SubMenu from '../Pages/SubMenu';
 import Pontos from '../Pages/Pontos';
 import Pesquisa from '../Pages/Pesquisa';
 import Ponto from '../components/ponto';
-import Carregar from '../components/carregar';
+import Grafico from '../Pages/Gráficos';
 
 const Routes = createAppContainer(
     createStackNavigator({
@@ -13,6 +13,7 @@ const Routes = createAppContainer(
         Pontos,
         Pesquisa,
         Ponto,
+        Grafico
     })
 );
 
