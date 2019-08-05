@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Image, Alert } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import styles from './styles';
 
@@ -11,8 +11,8 @@ export default class Menu extends Component{
     constructor(props){
         super(props);
         this.state = {
-            nome: '',
-            localizacao: '',
+            nome: null,
+            localizacao: null,
             data: '01-01-2018',
             //pontos: 0,
         }
@@ -28,6 +28,7 @@ export default class Menu extends Component{
                 
                 <View style={styles.form}>
                     <TextInput 
+                        autoCompleteType='name'
                         textContentType='name'
                         onChangeText={(name) => this.setState({nome: name})}
                         placeholder='Nome do Proprietário'
@@ -35,7 +36,7 @@ export default class Menu extends Component{
                     ></TextInput>
                     <TextInput 
                         textContentType='addressCityAndState'
-                        dataDetectorTypes='address'
+                        autoCompleteType='street-address'
                         onChangeText={(location) => this.setState({localizacao: location})}
                         placeholder='Localização'
                         style={styles.textInput}
@@ -66,7 +67,12 @@ export default class Menu extends Component{
                     />
                 </View>
                 <View style={styles.btn}>
-                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SubMenu', {result: this.state})}>
+                    <TouchableOpacity style={styles.button} onPress={() => {
+                        if(this.state.nome == null || this.state.localizacao == null || this.state.pontos == null){
+                            Alert.alert('Preencha todos os formulários!')
+                        } else {
+                            this.props.navigation.navigate('SubMenu', {result: this.state})
+                        }}}>
                         <Text style={styles.textButton}>Começar</Text>
                     </TouchableOpacity>
                 </View>

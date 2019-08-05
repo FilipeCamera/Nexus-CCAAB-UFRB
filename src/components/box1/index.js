@@ -31,7 +31,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked1 == false){
                                 this.setState({ isChecked1: !this.state.isChecked});
                                 this.setState({ isChecked2: false, isChecked3: false, isChecked4: false, isChecked5: false})
-                                this.setState({pts: 1});
+                                this.setState({pts: 1})
                             }else if(this.state.isChecked1 == true){
                                 this.setState({isChecked1: false});
                             }}}/>

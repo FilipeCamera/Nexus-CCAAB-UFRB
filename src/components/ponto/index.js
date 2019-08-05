@@ -12,7 +12,7 @@ const Ponto = ({ params, navigation }) => {
                 <View style={styles.table}>
                     <Text style={styles.tableTitle}>Ponto 1</Text>
                     <Text style={styles.tableDesc}>Primeira área a ser estudada.</Text>
-                    <TouchableOpacity style={styles.tableBtn} onPress={() => navigation.navigate('Pesquisa')}>
+                    <TouchableOpacity style={styles.tableBtn} onPress={() => navigation.navigate('Pesquisa', {result: params})}>
                         <Text style={styles.btnText}>Iniciar</Text>
                     </TouchableOpacity>
                 </View>

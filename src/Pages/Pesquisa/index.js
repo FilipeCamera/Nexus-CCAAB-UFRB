@@ -36,7 +36,32 @@ export default class Pesquisa extends Component {
     constructor(props){
         super(props);
         this.state = {
+            pontos: this.props.navigation.state.params.result.pontos,
             animating: true,
+            pt1: 0,
+            pt2: 0,
+            pt3: 0,
+            pt4: 0,
+            pt5: 0,
+            pt6: 0,
+            pt7: 0,
+            pt8: 0,
+            pt9: 0,
+            pt10: 0,
+            pt11: 0,
+            pt12: 0,
+            pt13: 0,
+            pt14: 0,
+            pt15: 0,
+            pt16: 0,
+            pt17: 0,
+            pt18: 0,
+            pt19: 0,
+            pt20: 0,
+            pt21: 0,
+            pt22: 0,
+            pt23: 0,
+            pt24: 0,
 
         }
     }
@@ -87,7 +112,7 @@ export default class Pesquisa extends Component {
                     <BoxVinT />
                     <BoxVInQ />                          
                     <View style={styles.boxbtn}>
-                        <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.goBack()}>
+                        <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.navigate('Grafico', {result:this.state})}>
                             <Text style={styles.txtbtn}>Finalizar</Text>
                         </TouchableOpacity>
                     </View>
