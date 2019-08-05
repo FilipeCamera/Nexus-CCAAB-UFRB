@@ -3,7 +3,8 @@ import {
   Text,
   View,
   processColor,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from 'react-native';
 
 import update from 'immutability-helper';
@@ -713,6 +714,14 @@ export default class Grafico extends Component {
                     <Text style={styles.text}>23 - pH 20-40</Text>
                     <Text style={styles.text}>24 - Massa Seca de Espontâneas</Text>
                 </View>
+            </View>
+            <View style={styles.btn}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => this.props.navigation.navigate('Pontos', {result: this.state})}
+                >
+                    <Text style={styles.btntext}>Finalizar</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
       </View>

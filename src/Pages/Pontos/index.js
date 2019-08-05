@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import update from 'immutability-helper';
 import styles from '../Pontos/styles';
 import Ponto from '../../components/ponto';
 
@@ -13,7 +14,7 @@ export default class Pontos extends Component {
         super(props);
         this.state= {
             pontos: this.props.navigation.state.params.result.pontos,
-            id: this.props.navigation.state.params.result.id
+            id: this.props.navigation.state.params.result.id,
         }
     }
     render() {
@@ -24,7 +25,7 @@ export default class Pontos extends Component {
                         <Icon name='arrowleft' size={24} color='rgba(0, 0, 0, 1.0)' style={{padding: 5}}/>
                     </TouchableOpacity>
                     <Text style={styles.titulo}>Área {this.state.id}</Text>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Grafico', {result: this.state})}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('GraficoA', {result: this.state})}>
                         <Icon name='dotchart' size={24} color='rgba(0, 0, 0, 1.0)' style={{padding: 5}}/>
                     </TouchableOpacity>
                 </View>

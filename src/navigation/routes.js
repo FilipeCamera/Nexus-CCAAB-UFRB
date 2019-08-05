@@ -4,7 +4,8 @@ import SubMenu from '../Pages/SubMenu';
 import Pontos from '../Pages/Pontos';
 import Pesquisa from '../Pages/Pesquisa';
 import Ponto from '../components/ponto';
-import Grafico from '../Pages/Gráficos';
+import GraficoA from '../Pages/Gráficos/GráficoA';
+import GraficoP from '../Pages/Gráficos/GráficoP';
 
 const Routes = createAppContainer(
     createStackNavigator({
@@ -13,7 +14,8 @@ const Routes = createAppContainer(
         Pontos,
         Pesquisa,
         Ponto,
-        Grafico
+        GraficoA,
+        GraficoP
     })
 );
 

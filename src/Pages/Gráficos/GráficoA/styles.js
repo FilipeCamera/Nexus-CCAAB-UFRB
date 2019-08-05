@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     text: {
         color: 'rgba(0,0,0, 0.8)',
         fontSize: 14
-    }
+    },
 })
 
 export default styles;

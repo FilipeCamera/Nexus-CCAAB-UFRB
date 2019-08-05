@@ -8,7 +8,6 @@ export default class BoxUm extends Component{
     constructor(props){
         super(props);
         this.state = {
-            pts: 0,
             isChecked1: false,
             isChecked2: false,
             isChecked3: false,
@@ -31,7 +30,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked1 == false){
                                 this.setState({ isChecked1: !this.state.isChecked});
                                 this.setState({ isChecked2: false, isChecked3: false, isChecked4: false, isChecked5: false})
-                                this.setState({pts: 1})
+                                this.props.click(1)
                             }else if(this.state.isChecked1 == true){
                                 this.setState({isChecked1: false});
                             }}}/>
@@ -40,7 +39,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked2 == false){
                                 this.setState({ isChecked2: !this.state.isChecked});
                                 this.setState({ isChecked1: false, isChecked3: false, isChecked4: false, isChecked5: false})
-                                this.setState({pts: 2});
+                                this.props.click(2)
                             }else if(this.state.isChecked2 == true){
                                 this.setState({isChecked2: false});
                             }}}/>

@@ -29,6 +29,7 @@ import BoxVInQ from '../../components/box24';
 
 import styles from './styles';
 
+
 export default class Pesquisa extends Component {
     static navigationOptions = {
         header: null,
@@ -87,7 +88,7 @@ export default class Pesquisa extends Component {
                     <Text style={styles.txttitle}>Dados</Text>
                 </View>
                 <ScrollView style={{padding: 0}}>
-                    <BoxUm />
+                    <BoxUm click={this.click.bind(this)}/>
                     <BoxDois /> 
                     <BoxTres />
                     <BoxQua />
@@ -112,7 +113,9 @@ export default class Pesquisa extends Component {
                     <BoxVinT />
                     <BoxVInQ />                          
                     <View style={styles.boxbtn}>
-                        <TouchableOpacity style={styles.btn} onPress={() => this.props.navigation.navigate('Grafico', {result:this.state})}>
+                        <TouchableOpacity style={styles.btn} onPress={() => {
+                            this.props.navigation.navigate('GraficoP', {result:this.state})
+                        }}>
                             <Text style={styles.txtbtn}>Finalizar</Text>
                         </TouchableOpacity>
                     </View>
