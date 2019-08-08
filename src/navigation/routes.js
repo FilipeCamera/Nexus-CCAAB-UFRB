@@ -15,7 +15,7 @@ const Routes = createAppContainer(
         Pesquisa,
         Ponto,
         GraficoA,
-        GraficoP
+        GraficoP,
     })
 );
 

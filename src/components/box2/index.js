@@ -31,7 +31,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked1 == false){
                                 this.setState({ isChecked1: !this.state.isChecked});
                                 this.setState({ isChecked2: false, isChecked3: false, isChecked4: false, isChecked5: false})
-                                this.setState({pts: 1});
+                                this.props.click(1)
                             }else if(this.state.isChecked1 == true){
                                 this.setState({isChecked1: false});
                             }}}/>
@@ -40,7 +40,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked2 == false){
                                 this.setState({ isChecked2: !this.state.isChecked});
                                 this.setState({ isChecked1: false, isChecked3: false, isChecked4: false, isChecked5: false})
-                                this.setState({pts: 2});
+                                this.props.click(2)
                             }else if(this.state.isChecked2 == true){
                                 this.setState({isChecked2: false});
                             }}}/>
@@ -49,7 +49,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked3 == false){
                                 this.setState({ isChecked3: !this.state.isChecked});
                                 this.setState({ isChecked1: false, isChecked2: false, isChecked4: false, isChecked5: false})
-                                this.setState({pts: 3});
+                                this.props.click(3)
                             }else if(this.state.isChecked3 == true){
                                 this.setState({isChecked3: false});
                             }}}/>
@@ -58,7 +58,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked4 == false){
                                 this.setState({ isChecked4: !this.state.isChecked});
                                 this.setState({ isChecked1: false, isChecked2: false, isChecked3: false, isChecked5: false})
-                                this.setState({pts: 4});
+                                this.props.click(4)
                             }else if(this.state.isChecked4 == true){
                                 this.setState({isChecked4: false});
                             }}}/>
@@ -67,7 +67,7 @@ export default class BoxUm extends Component{
                             if(this.state.isChecked5 == false){
                                 this.setState({ isChecked5: !this.state.isChecked});
                                 this.setState({ isChecked1: false, isChecked2: false, isChecked3: false, isChecked4: false})
-                                this.setState({pts: 5});
+                                this.props.click(5)
                             }else if(this.state.isChecked5 == true){
                                 this.setState({isChecked5: false});
                             }}}/>

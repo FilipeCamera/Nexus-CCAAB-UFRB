@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import update from 'immutability-helper';
 import styles from '../Pontos/styles';
 import Ponto from '../../components/ponto';
 
@@ -15,8 +14,15 @@ export default class Pontos extends Component {
         this.state= {
             pontos: this.props.navigation.state.params.result.pontos,
             id: this.props.navigation.state.params.result.id,
+            p: 0,
         }
     }
+    componentDidMount(){
+        Alert.alert('Clique duas vezes no botão Iniciar para começar!')
+    }
+    muda = valor => (
+        this.setState({p: valor})
+    )
     render() {
         return(
             <View style={styles.container}>
@@ -30,7 +36,7 @@ export default class Pontos extends Component {
                     </TouchableOpacity>
                 </View>
                 <ScrollView>
-                    <Ponto params={this.state} navigation={this.props.navigation}/>
+                    <Ponto muda={this.muda} params={this.state} navigation={this.props.navigation}/>
                 </ScrollView>
                 <View>
                     <TouchableOpacity style={styles.button}>
