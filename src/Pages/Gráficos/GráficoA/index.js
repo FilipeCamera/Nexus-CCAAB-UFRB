@@ -19,7 +19,7 @@ export default class Grafico extends Component {
     super(props);
 
     this.state = {
-      data: this.props.navigation.state.params.result.data,
+      data: {},
       legend: {
         enabled: true,
         textSize: 14,

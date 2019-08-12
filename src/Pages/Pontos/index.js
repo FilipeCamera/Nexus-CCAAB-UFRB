@@ -12,6 +12,7 @@ export default class Pontos extends Component {
     constructor(props){
         super(props);
         this.state= {
+            data: this.props.navigation.state.params.result.data,
             pontos: this.props.navigation.state.params.result.pontos,
             id: this.props.navigation.state.params.result.id,
             p: 0,

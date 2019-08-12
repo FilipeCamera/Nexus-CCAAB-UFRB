@@ -42,7 +42,7 @@ export default class SubMenu extends Component {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.btn}>
-                    <TouchableOpacity style={styles.button2}>
+                    <TouchableOpacity style={styles.button2} onPress={() => this.props.navigation.navigate('MenuR', {result: this.state})}>
                         <Text style={styles.txtbutton2}>Finalizar</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button3} onPress={() => this.props.navigation.goBack()}>

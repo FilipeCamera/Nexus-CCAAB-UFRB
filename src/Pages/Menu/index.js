@@ -11,8 +11,8 @@ export default class Menu extends Component{
     constructor(props){
         super(props);
         this.state = {
-            nome: null,
-            localizacao: null,
+            nome: null || ' ',
+            localizacao: null || ' ',
             data: '01-01-2018',
             //pontos: 0,
         }
@@ -29,7 +29,7 @@ export default class Menu extends Component{
                 <View style={styles.form}>
                     <TextInput 
                         autoCompleteType='name'
-                        textContentType='name'
+                        keyboardType='default'
                         onChangeText={(name) => this.setState({nome: name})}
                         placeholder='Nome do Proprietário'
                         style={styles.textInput}
@@ -37,6 +37,7 @@ export default class Menu extends Component{
                     <TextInput 
                         textContentType='addressCityAndState'
                         autoCompleteType='street-address'
+                        keyboardType='default'
                         onChangeText={(location) => this.setState({localizacao: location})}
                         placeholder='Localização'
                         style={styles.textInput}
@@ -68,9 +69,19 @@ export default class Menu extends Component{
                 </View>
                 <View style={styles.btn}>
                     <TouchableOpacity style={styles.button} onPress={() => {
-                        if(this.state.nome == null || this.state.localizacao == null || this.state.pontos == null){
-                            Alert.alert('Preencha todos os formulários!')
-                        } else {
+                        if(this.state.nome == null && this.state.localizacao == null && this.state.pontos == null){
+                            Alert.alert('Preencha todos os campos!')
+                        } 
+                        else if(this.state.nome == null || this.state.localizacao == null || this.state.pontos == null){
+                            Alert.alert('Preencha todos os campos!')
+                        }
+                        else if(this.state.nome == ' ' || this.state.localizacao == ' ' || this.state.pontos == null){
+                            Alert.alert('Preencha todos os campos!')
+                        }
+                        else if(this.state.pontos > 5 || this.state.pontos < 1){
+                            Alert.alert('O número de pontos tem que ser >= 1 e <= 5')
+                        }
+                        else {
                             this.props.navigation.navigate('SubMenu', {result: this.state})
                         }}}>
                         <Text style={styles.textButton}>Começar</Text>
