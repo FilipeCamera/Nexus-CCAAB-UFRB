@@ -11,6 +11,9 @@ export default class SubMenu extends Component {
     constructor(props){
         super(props);
         this.state = {
+            nome: this.props.navigation.state.params.result.nome,
+            localizacao: this.props.navigation.state.params.result.localizacao,
+            data: this.props.navigation.state.params.result.data,
             pontos: this.props.navigation.state.params.result.pontos,
             id: 0,
         }
@@ -22,9 +25,9 @@ export default class SubMenu extends Component {
                     <Text style={styles.titulo}>Nexus</Text>
                 </View>
                 <View style={styles.formulario}>
-                    <Text style={styles.text}>Nome: { this.props.navigation.state.params.result.nome }</Text>
-                    <Text style={styles.text}>Localização: { this.props.navigation.state.params.result.localizacao }</Text>
-                    <Text style={styles.text}>Data: { this.props.navigation.state.params.result.data }</Text>
+                    <Text style={styles.text}>Nome: { this.state.nome }</Text>
+                    <Text style={styles.text}>Localização: { this.state.localizacao }</Text>
+                    <Text style={styles.text}>Data: { this.state.data }</Text>
                     <Text style={styles.text}>Pontos: { this.state.pontos }</Text>
                 </View>
                 <View style={styles.btn}>
@@ -43,7 +46,7 @@ export default class SubMenu extends Component {
                 </View>
                 <View style={styles.btn}>
                     <TouchableOpacity style={styles.button2} onPress={() => this.props.navigation.navigate('MenuR', {result: this.state})}>
-                        <Text style={styles.txtbutton2}>Finalizar</Text>
+                        <Text style={styles.txtbutton2}>Resultado</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button3} onPress={() => this.props.navigation.goBack()}>
                         <Text style={styles.txtbutton2}>Cancelar</Text>

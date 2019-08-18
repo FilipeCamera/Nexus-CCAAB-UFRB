@@ -159,7 +159,7 @@ export default class Pesquisa extends Component {
                 <View style={styles.boxtitle}>
                     <Text style={styles.txttitle}>Dados</Text>
                 </View>
-                <ScrollView style={{padding: 0}}>
+                <ScrollView style={styles.scroll}>
                     <BoxUm click={this.click}/>
                     <BoxDois click={this.click2}/> 
                     <BoxTres click={this.click3}/>

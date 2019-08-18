@@ -67,6 +67,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 18,
         color: 'rgba(255, 255, 255, 1.0)'
+    },
+    scroll: {
+        padding: 0,
+        marginBottom: 10,
+        height: Dimensions.get('window').height - 40,
     }
 })
 

@@ -41,7 +41,7 @@ export default class Pontos extends Component {
                 </ScrollView>
                 <View>
                     <TouchableOpacity style={styles.button}>
-                        <Text style={styles.btnText}>Finalizar/SalvarDados</Text>
+                        <Text style={styles.btnText}>Salvar</Text>
                     </TouchableOpacity>
                 </View>
             </View>
